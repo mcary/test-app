@@ -2,6 +2,13 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 1) do
+
+  create_table "posts", :force => true do |t|
+    t.column "title",   :string
+    t.column "slug",    :string
+    t.column "publish", :datetime
+    t.column "body",    :text
+  end
 
 end
